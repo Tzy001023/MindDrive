@@ -1,19 +1,22 @@
 #!/bin/bash
+set -e
 export PYTHONPATH="${PWD}"
-export PYTHONPATH="/home/carla/PythonAPI:${PYTHONPATH}"
-export PYTHONPATH="/home/carla/PythonAPI/carla:${PYTHONPATH}"
+export PYTHONPATH="/home/tangzhenyu/01-soft/01-research/09-Carla/04-CARLA0.9.15MindDrive/PythonAPI:${PYTHONPATH}"
+export PYTHONPATH="/home/tangzhenyu/01-soft/01-research/09-Carla/04-CARLA0.9.15MindDrive/PythonAPI/carla:${PYTHONPATH}"
 export PYTHONPATH="rl_projects/:${PYTHONPATH}"
 export PYTHONPATH="rl_projects/scenario_runner:${PYTHONPATH}"
 
 export TORCH_DISTRIBUTED_DEBUG="INFO"
-export CARLA_ROOT="/home/carla"
-export CARLA_SERVER="/home/carla/CarlaUE4.sh"
+export CARLA_ROOT="/home/tangzhenyu/01-soft/01-research/09-Carla/04-CARLA0.9.15MindDrive"
+export CARLA_SERVER="/home/tangzhenyu/01-soft/01-research/09-Carla/04-CARLA0.9.15MindDrive/CarlaUE4.sh"
 export SCENARIO_RUNNER_ROOT="rl_projects/scenario_runner"
 export DEBUG_SHOW_PRED="1"
 
+export PYTHONPATH="/home/tangzhenyu/01-soft/01-research/09-Carla/04-CARLA0.9.15MindDrive/PythonAPI/carla:${PYTHONPATH}"
+
 export PORT=$1
 export TM_PORT=$2
-export REPETITIONS=5 # multiple evaluation runs
+export REPETITIONS=1 # multiple evaluation runs
 
 # TCP evaluation
 export ROUTES=$3
@@ -30,4 +33,4 @@ CUDA_VISIBLE_DEVICES=${GPU_RANK} python adzoo/minddrive/rollout.py \
     --traffic_manager_port=${TM_PORT} \
     --repetitions=${REPETITIONS} \
     --resume \
-    --use_carla \
+    --use_carla

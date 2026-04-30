@@ -1,0 +1,41 @@
+# ---- local / generated files ----
+.idea/
+Bench2DriveZoo_backup/
+ckpts/
+build/
+dist/
+*.egg-info/
+mmcv.egg-info/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Compiled extensions
+*.so
+
+# Logs / locks / temporary outputs
+*.log
+*.lock
+nohup.out
+*.pkl
+
+# CARLA generated data
+carla/rollout_data/
+carla/rollout_routes*/
+carla_collection_*.lock
+
+# Generated route queues
+data/test_opensource_routes/*queue*/
+data/test_opensource_routes/rollout_routes_*.xml
+
+# Accidental terminal-output files
+/Gym
+/Model:
+/ModuleNotFoundError:
+/Please
+/See
+/Some
+/You
+/from
+/requirements (copy).txt

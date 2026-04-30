@@ -1,8 +1,12 @@
 #!/bin/bash
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+cd "$PROJECT_ROOT" || exit 1
 # ================= Config =================
 BASE_PORT=30000
 BASE_TM_PORT=50000
-BASE_ROUTES=data/test_opensource_routes/rollout_routes
+BASE_ROUTES=/home/tangzhenyu/01-soft/01-research/15-Bench2Drive/Bench2Drive/leaderboard/data/routes_devtest
 CONFIG=adzoo/minddrive/configs/minddrive_qwen2_05B_lora_rollout.py
 PLANNER_TYPE=traj
 ALGO=minddrive_collect_ma_stage3

@@ -12,7 +12,6 @@
 # ------------------------------------------------------------------------
 
 from sqlite3 import Timestamp
-from black import out
 import torch
 import torch.nn.functional as F
 from zmq import PROTOCOL_ERROR_ZMTP_MALFORMED_COMMAND_MESSAGE

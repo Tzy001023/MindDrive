@@ -25,7 +25,7 @@ future_frames = 6
 _dim_ = 256
 _pos_dim_ = _dim_//2
 _ffn_dim_ = _dim_*2
-fp32_infer=True
+fp32_infer=False
 ida_aug_conf = {
         "resize_lim": (0.37, 0.45),
         "final_dim": (320, 640),
